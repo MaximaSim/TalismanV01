@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private Button btnCreateLobby;
     private Button btnJoinLobby;
-    private Button btnViewCharacters;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         // Buttons mit Layout-Elementen verknüpfen
         btnCreateLobby = findViewById(R.id.btnCreateLobby);
         btnJoinLobby = findViewById(R.id.btnJoinLobby);
-        btnViewCharacters = findViewById(R.id.btnViewCharacters);
 
         // Button: Lobby erstellen (Host)
         btnCreateLobby.setOnClickListener(new View.OnClickListener() {
@@ -38,15 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
 
-        // Button: Charaktere anzeigen
-        btnViewCharacters.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CharacterListActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
 

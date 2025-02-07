@@ -10,11 +10,11 @@
         android:id="@+id/btnCreateLobby"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="Lobby erstellen"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnJoinLobby"
@@ -22,16 +22,6 @@
         android:layout_height="wrap_content"
         android:text="Lobby beitreten"
         app:layout_constraintTop_toBottomOf="@id/btnCreateLobby"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:id="@+id/btnViewCharacters"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Charaktere ansehen"
-        app:layout_constraintTop_toBottomOf="@id/btnJoinLobby"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp" />
