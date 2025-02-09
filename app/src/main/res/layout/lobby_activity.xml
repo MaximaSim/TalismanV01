@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Titel der Lobby -->
+    <TextView
+        android:id="@+id/lobbyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lobby: Warten auf andere Spieler..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Zeigt die Charakterinformationen des aktuellen Spielers -->
+    <LinearLayout
+        android:id="@+id/playerCharacterInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lobbyTitle"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/currentPlayerCharacterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charakter: Krieger"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currentPlayerStrength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stärke: 4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/currentPlayerTalent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Talent: 1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/currentPlayerGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gold: 10"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/currentPlayerHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leben: 20"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/currentPlayerFate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schicksal: 3"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Liste der anderen Spieler in der Lobby -->
+    <TextView
+        android:id="@+id/otherPlayersTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Andere Spieler:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/playerCharacterInfo"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/playersListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/otherPlayersTitle"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1" />
+
+    <!-- Button zum Starten des Spiels -->
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spiel Starten"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp" />
+</RelativeLayout>
+
