@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/charName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charaktername"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stärke:"/>
+
+    <TextView
+        android:id="@+id/charStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talent:"/>
+
+    <TextView
+        android:id="@+id/charTalent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gold:"/>
+
+    <TextView
+        android:id="@+id/charGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leben:"/>
+
+    <TextView
+        android:id="@+id/charLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schicksal:"/>
+
+    <TextView
+        android:id="@+id/charFate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/btnIncreaseStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Stärke" />
+
+    <Button
+        android:id="@+id/btnDecreaseStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Stärke" />
+</LinearLayout>

@@ -1,40 +1,44 @@
 package com.example.talismanv01;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 public class CharacterManager {
-        private List<Character> allCharacters;
-        private Map<String, Character> assignedCharacters;
+    // Initialize the static list directly or in a static block
+    private static List<GameCharacter> characters = initCharacters();
 
-//        public CharacterManager() {
-//            allCharacters = new ArrayList<>();
-//            assignedCharacters = new HashMap<>();
-//
-//            // Beispiel-Charaktere
-//            allCharacters.add(new Character("Krieger", 4, 1, 2, 5, 3));
-//            allCharacters.add(new Character("Hexe", 2, 4, 3, 4, 5));
-//            allCharacters.add(new Character("Dieb", 3, 3, 4, 3, 2));
-//        }
-
-        public Character assignCharacter(String playerId) {
-            if (allCharacters.isEmpty()) return null;
-            Random random = new Random();
-            Character character = allCharacters.remove(random.nextInt(allCharacters.size()));
-            assignedCharacters.put(playerId, character);
-            return character;
-        }
-
-        public Character getCharacter(String playerId) {
-            return assignedCharacters.get(playerId);
-        }
-
-        public Map<String, Character> getAllAssignedCharacters() {
-            return assignedCharacters;
-        }
+    // Static method to initialize characters
+    private static List<GameCharacter> initCharacters() {
+        List<GameCharacter> chars = new ArrayList<>();
+        chars.add(new GameCharacter("Krieger", 4, 2, 1, 5, 3, "Base"));
+        chars.add(new GameCharacter("Zauberer", 2, 5, 2, 4, 5, "Base"));
+        chars.add(new GameCharacter("Dieb", 3, 4, 3, 4, 4, "Base"));
+        chars.add(new GameCharacter("Priester", 3, 3, 2, 5, 5, "Base"));
+        chars.add(new GameCharacter("Elf", 2, 5, 1, 4, 4, "Base"));
+        return chars;
     }
 
+    public CharacterManager() {
+        // Constructor now empty since initialization happens statically
+    }
 
+    public GameCharacter getRandomCharacter() {
+        Random random = new Random();
+        return characters.get(random.nextInt(characters.size()));
+    }
+
+    public static List<GameCharacter> getAllCharacters() {
+        return new ArrayList<>(characters);
+    }
+
+    public List<GameCharacter> getCharactersByExpansion(String expansion) {
+        List<GameCharacter> filteredCharacters = new ArrayList<>();
+        for (GameCharacter character : characters) {
+            if (character.getExpansion().equals(expansion)) {
+                filteredCharacters.add(character);
+            }
+        }
+        return filteredCharacters;
+    }
+}

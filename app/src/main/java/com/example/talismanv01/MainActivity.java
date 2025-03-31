@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private Button btnCreateLobby;
     private Button btnJoinLobby;
@@ -20,14 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Lobby erstellen
         btnCreateLobby.setOnClickListener(v -> {
-
-            Intent intent = new Intent(this, LobbyActivity.class);
-            startActivity(intent);  // Wechsel zur LobbyActivity
+            Intent intent = new Intent(this, ExpansionSelectionActivity.class);
+            //intent.putExtra("isHost", true);
+            startActivity(intent);
         });
+
 
         // Lobby beitreten
         btnJoinLobby.setOnClickListener(v -> {
-            Intent intent = new Intent(this, LobbyActivity.class);
+            Intent intent = new Intent(this, LobbyClientActivity.class);
             startActivity(intent);  // Wechsel zur LobbyActivity
         });
     }
@@ -37,6 +41,19 @@ public class MainActivity extends AppCompatActivity {
         // Hier könnte man z.B. eine zufällige Zahl oder UUID generieren
         return "Spieler-" + (int) (Math.random() * 1000); // Beispiel: "Spieler-123"
     }
+
+    private void filterCharactersByExpansions(ArrayList<String> expansions) {
+        List<GameCharacter> allCharacters = CharacterManager.getAllCharacters();
+        List<GameCharacter> availableCharacters = new ArrayList<>();
+
+        for (GameCharacter character : allCharacters) {
+            // Basis-Spiel oder gewählte Erweiterungen erlauben
+            if (character.getExpansion().equals("Base") || expansions.contains(character.getExpansion())) {
+                availableCharacters.add(character);
+            }
+        }
+    }
+
 }
 
 
