@@ -1,95 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="24dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Wähle Erweiterungen aus:"
-        android:textSize="18sp"
-        android:paddingBottom="10dp" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <CheckBox
-        android:id="@+id/checkbox_expansion1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wähle Erweiterungen aus"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp" />
 
-    <CheckBox
-        android:id="@+id/checkbox_expansion2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 2" />
+        <CheckBox
+            android:id="@+id/cbBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basis-Spiel" />
 
-    <CheckBox
-        android:id="@+id/checkbox_expansion3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 3" />
+        <CheckBox
+            android:id="@+id/cbCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stadt-Erweiterung" />
 
-    <CheckBox
-        android:id="@+id/checkbox_expansion4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 4" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 5" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 6" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 7" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 8" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 9" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 10" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 11" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 12" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 13" />
-    <CheckBox
-        android:id="@+id/checkbox_expansion14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Erweiterung 14" />
+        <CheckBox
+            android:id="@+id/cbForest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wald-Erweiterung" />
 
-    <Button
-        android:id="@+id/btnConfirmExpansions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bestätigen"
-        android:layout_marginTop="20dp" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weiter"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

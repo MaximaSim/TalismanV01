@@ -26,25 +26,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LobbyActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light"
-            android:configChanges="orientation|keyboardHidden">
-        </activity>
-        <activity
-            android:name=".LobbyClientActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light"
-            android:configChanges="orientation|keyboardHidden">
-        </activity>
-        <activity
-            android:name=".LobbyHostActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light"
-            android:configChanges="orientation|keyboardHidden">
-        </activity>
-        <activity
             android:name=".ExpansionSelectionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity
+            android:name=".CharacterSelectionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity
+            android:name=".CharacterDisplayActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light"
             android:configChanges="orientation|keyboardHidden">

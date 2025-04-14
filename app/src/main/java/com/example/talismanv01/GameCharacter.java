@@ -31,22 +31,27 @@ public class GameCharacter implements Serializable {
         return expansion;
     }
 
-    // Methoden zum Erhöhen/Verringern der Werte
-    public void increaseStrength() { strength++; }
-    public void decreaseStrength() { if (strength > 0) strength--; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void increaseTalent() { talent++; }
-    public void decreaseTalent() { if (talent > 0) talent--; }
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
 
-    public void increaseGold() { gold++; }
-    public void decreaseGold() { if (gold > 0) gold--; }
+    public void setTalent(int talent) {
+        this.talent = talent;
+    }
 
-    public void increaseLife() { life++; }
-    public void decreaseLife() { if (life > 0) life--; }
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
 
-    public void increaseFate() { fate++; }
-    public void decreaseFate() { if (fate > 0) fate--; }
+    public void setLife(int life) {
+        this.life = life;
+    }
 
-
-
+    public void setFate(int fate) {
+        this.fate = fate;
+    }
 }

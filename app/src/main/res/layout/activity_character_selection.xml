@@ -3,35 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="16dp"
     android:gravity="center">
 
-    <TextView
+    <Button
+        android:id="@+id/btnCharacter1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gib die IP des Hosts ein:"
-        android:textSize="18sp"
-        android:padding="10dp"/>
-
-    <EditText
-        android:id="@+id/ipInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="IP-Adresse"
-        android:inputType="text"/>
+        android:text="Charakter 1" />
 
     <Button
-        android:id="@+id/btnJoin"
+        android:id="@+id/btnCharacter2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Beitreten"
-        android:layout_marginTop="20dp"/>
+        android:text="Charakter 2" />
 
-    <TextView
-        android:id="@+id/status"
+    <Button
+        android:id="@+id/btnCharacter3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Status: Warten..."
-        android:textSize="16sp"
-        android:padding="10dp"/>
+        android:text="Charakter 3" />
+
+    <Button
+        android:id="@+id/btnRandomCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ich möchte alle 3 nicht spielen" />
+
 </LinearLayout>
