@@ -1,8 +1,8 @@
 package com.example.talismanv01;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Random;
@@ -14,7 +14,6 @@ public class CharacterSelectionActivity extends AppCompatActivity {
     private ArrayList<String> selectedExpansions;
     private ArrayList<GameCharacter> validCharacters;
     private ArrayList<GameCharacter> displayedCharacters = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +40,13 @@ public class CharacterSelectionActivity extends AppCompatActivity {
 
         // Setze OnClickListener für den Random-Button
         btnRandomCharacter.setOnClickListener(v -> {
-            // Wähle einen einzelnen zufälligen Charakter aus
+            // Wähle einen einzelnen zufälligen Charakter aus, der nicht bereits angezeigt wird
             GameCharacter randomCharacter = getRandomSingleCharacter();
             if (randomCharacter != null) {
                 openCharacterDisplay(randomCharacter);
+            } else {
+                // Falls kein weiterer Charakter verfügbar ist
+                Toast.makeText(this, "Keine weiteren Charaktere verfügbar", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -52,6 +54,10 @@ public class CharacterSelectionActivity extends AppCompatActivity {
     // Methode zum Aktualisieren der 3 Hauptcharakterbuttons
     private void updateCharacterButtons() {
         ArrayList<GameCharacter> randomCharacters = getRandomCharacters(3);
+
+        // Speichere die aktuell angezeigten Charaktere
+        displayedCharacters.clear();
+        displayedCharacters.addAll(randomCharacters);
 
         // Falls keine oder zu wenige Charaktere gefunden wurden
         if (randomCharacters.size() < 3) {
@@ -89,7 +95,7 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         btnCharacter3.setOnClickListener(v -> openCharacterDisplay(randomCharacters.get(2)));
     }
 
-    // Methode für einen einzelnen Zufallscharakter
+    // Methode für einen einzelnen Zufallscharakter, der nicht bereits angezeigt wird
     private GameCharacter getRandomSingleCharacter() {
         ArrayList<GameCharacter> remainingCharacters = new ArrayList<>();
 
@@ -99,17 +105,17 @@ public class CharacterSelectionActivity extends AppCompatActivity {
             }
         }
 
-        if (remainingCharacters.isEmpty()) return null;
+        if (remainingCharacters.isEmpty()) {
+            return null;
+        }
 
         Random rand = new Random();
         int randomIndex = rand.nextInt(remainingCharacters.size());
         return remainingCharacters.get(randomIndex);
     }
 
-
     private ArrayList<GameCharacter> getRandomCharacters(int count) {
         ArrayList<GameCharacter> randomCharacters = new ArrayList<>();
-        displayedCharacters = new ArrayList<>(randomCharacters);
 
         // Sicherstellen, dass wir genügend gültige Charaktere haben
         if (validCharacters.size() < count) {
@@ -120,6 +126,7 @@ public class CharacterSelectionActivity extends AppCompatActivity {
 
         Random rand = new Random();
         for (int i = 0; i < count; i++) {
+            if (availableCharacters.isEmpty()) break;
             int randomIndex = rand.nextInt(availableCharacters.size());
             GameCharacter randomCharacter = availableCharacters.get(randomIndex);
             randomCharacters.add(randomCharacter);

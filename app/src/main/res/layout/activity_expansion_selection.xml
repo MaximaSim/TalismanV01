@@ -18,22 +18,70 @@
             android:layout_marginBottom="16dp" />
 
         <CheckBox
-            android:id="@+id/cbBase"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Basis-Spiel" />
-
-        <CheckBox
             android:id="@+id/cbCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stadt-Erweiterung" />
+            android:text="Die Stadt" />
 
         <CheckBox
             android:id="@+id/cbForest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wald-Erweiterung" />
+            android:text="Das Waldland" />
+
+        <CheckBox
+            android:id="@+id/cbHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Das Hochland" />
+
+        <CheckBox
+            android:id="@+id/cbKK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Die Katakomben" />
+
+        <CheckBox
+            android:id="@+id/cbDrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Die Drachen" />
+
+        <CheckBox
+            android:id="@+id/cbKL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kataklysmus" />
+
+        <CheckBox
+            android:id="@+id/cbSn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Der Schnitter" />
+
+        <CheckBox
+            android:id="@+id/cbQuell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Die heilige Quelle" />
+
+        <CheckBox
+            android:id="@+id/cbFrost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Die Frostmark" />
+
+        <CheckBox
+            android:id="@+id/cbBlood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Der Blutmond" />
+
+        <CheckBox
+            android:id="@+id/cbFire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Die Feuerlande" />
 
         <Button
             android:id="@+id/btnConfirm"

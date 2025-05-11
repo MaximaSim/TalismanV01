@@ -21,5 +21,8 @@ public class CharacterManager {
     public static List<GameCharacter> getAllCharacters() {
         return allCharacters;
     }
+
+    //Erweiterungsname: High=Hochland, KK=Katakomben, City=Stadt, Forest=Waldland, Drag=Die Drachen,
+    //KL=Kataklysmus, Sn=Schnitter, Quell=Die heilige Quelle, Frost=Frostmark, Blood=Blutmond, Fire=Feuerlande
 }
 
