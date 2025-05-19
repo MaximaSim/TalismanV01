@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
-public class ExpansionSelectionActivity extends AppCompatActivity {
+public class ExpansionSelectionActivity extends BaseActivity {
 
     private CheckBox cbCity, cbForest, cbHigh, cbKK, cbDrag, cbKL, cbSn, cbQuell, cbFrost, cbBlood, cbFire;
 

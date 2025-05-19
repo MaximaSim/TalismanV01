@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">TalismanV01</string>
+    <string name="talisman">Talisman</string>
+    <string name="spiel_starten">Spiel starten</string>
+    <string name="charaktername">Charaktername</string>
+    <string name="die_heilige_quelle">Die heilige Quelle</string>
+    <string name="erweiterungen">Erweiterungen</string>
+    <string name="der_schnitter">Der Schnitter</string>
+    <string name="kataklysmus">Kataklysmus</string>
+    <string name="das_hochland">Das Hochland</string>
+    <string name="die_katakomben">Die Katakomben</string>
+    <string name="die_frostmark">Die Frostmark</string>
+    <string name="das_waldland">Das Waldland</string>
+    <string name="die_feuerlande">Die Feuerlande</string>
+    <string name="die_drachen">Die Drachen</string>
+    <string name="die_stadt">Die Stadt</string>
+    <string name="der_blutmond">Der Blutmond</string>
+    <string name="weiter">Weiter</string>
+    <string name="charakter_1">Charakter 1</string>
+    <string name="_0">0</string>
+    <string name="attribut">Attribut</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="charakter_2">Charakter 2</string>
+    <string name="charakter_3">Charakter 3</string>
+    <string name="ich_m_chte_alle_3_nicht_spielen">ich möchte alle 3 nicht spielen</string>
+    <string name="charakters">Charakters</string>
+    <string name="charaktere">Charaktere</string>
 </resources>

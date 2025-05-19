@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CharacterDisplayActivity extends AppCompatActivity {
+public class CharacterDisplayActivity extends BaseActivity {
 
     private GameCharacter character;
 

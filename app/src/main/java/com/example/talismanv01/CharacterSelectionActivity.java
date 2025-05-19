@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class CharacterSelectionActivity extends AppCompatActivity {
+public class CharacterSelectionActivity extends BaseActivity {
 
     private Button btnCharacter1, btnCharacter2, btnCharacter3, btnRandomCharacter;
     private ArrayList<GameCharacter> allCharacters;

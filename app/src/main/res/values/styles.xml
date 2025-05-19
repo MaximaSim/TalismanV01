@@ -2,5 +2,15 @@
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
+
+    <style name="MyCheckboxStyle">
+        <item name="android:buttonTint">#FFFFFF</item>
+        <item name="android:background">#7F9FB3</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">250dp</item>
+    </style>
 </resources>
 

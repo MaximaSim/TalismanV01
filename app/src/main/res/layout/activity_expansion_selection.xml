@@ -1,93 +1,347 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:background="@drawable/background_img"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:padding="16dp">
 
+        <!-- Title -->
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wähle Erweiterungen aus"
-            android:textSize="20sp"
-            android:layout_marginBottom="16dp" />
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/cinzel_black"
+            android:paddingBottom="16dp"
+            android:text="@string/erweiterungen"
+            android:textColor="#FFFFFF"
+            android:textSize="75sp" />
 
-        <CheckBox
-            android:id="@+id/cbCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Die Stadt" />
 
-        <CheckBox
-            android:id="@+id/cbForest"
-            android:layout_width="wrap_content"
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Das Waldland" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-        <CheckBox
-            android:id="@+id/cbHigh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Das Hochland" />
+            <!-- Image 1 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/cbKK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Die Katakomben" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/stadt" />
 
-        <CheckBox
-            android:id="@+id/cbDrag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Die Drachen" />
+                <CheckBox
+                    android:id="@+id/cbCity"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/die_stadt" />
+            </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/cbKL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kataklysmus" />
+            <!-- Image 2 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/cbSn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Der Schnitter" />
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/hochland" />
 
-        <CheckBox
-            android:id="@+id/cbQuell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Die heilige Quelle" />
+                <CheckBox
+                    android:id="@+id/cbHigh"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/das_hochland" />
+            </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/cbFrost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Die Frostmark" />
+            <!-- Image 3 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/cbBlood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Der Blutmond" />
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/waldland" />
 
-        <CheckBox
-            android:id="@+id/cbFire"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Die Feuerlande" />
+                <CheckBox
+                    android:id="@+id/cbForest"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/das_waldland" />
+            </LinearLayout>
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnConfirm"
-            android:layout_width="wrap_content"
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Weiter"
-            android:layout_marginTop="24dp" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <!-- Image 1 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/drachen" />
+
+                <CheckBox
+                    android:id="@+id/cbDrag"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/die_drachen" />
+            </LinearLayout>
+
+            <!-- Image 2 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/katakomben" />
+
+                <CheckBox
+                    android:id="@+id/cbKK"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:background="#7F9FB3"
+                    android:buttonTint="#FFFFFF"
+                    android:fontFamily="sans-serif-medium"
+                    android:minHeight="48dp"
+                    android:text="@string/die_katakomben"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <!-- Image 3 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/kataklysmus" />
+
+                <CheckBox
+                    android:id="@+id/cbKL"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/kataklysmus"
+                    android:textColor="#FDFDFD" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <!-- Image 1 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/feuerlande" />
+
+                <CheckBox
+                    android:id="@+id/cbFire"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/die_feuerlande" />
+            </LinearLayout>
+
+            <!-- Image 2 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/schnitter" />
+
+                <CheckBox
+                    android:id="@+id/cbSn"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/der_schnitter" />
+            </LinearLayout>
+
+            <!-- Image 3 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/heilige_quelle" />
+
+                <CheckBox
+                    android:id="@+id/cbQuell"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/die_heilige_quelle"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="25dp">
+
+            <!-- Image 1 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/frostmark" />
+
+                <CheckBox
+                    android:id="@+id/cbFrost"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/die_frostmark"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <!-- Image 2 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    app:srcCompat="@drawable/blutmond" />
+
+                <CheckBox
+                    android:id="@+id/cbBlood"
+                    style="@style/MyCheckboxStyle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="@string/der_blutmond" />
+            </LinearLayout>
+
+            <!-- Image 3 + Button -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_rounded_border"
+                    android:text="@string/weiter"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
